@@ -1,0 +1,64 @@
+Same or not
+
+Write a  program to find whether two arrays are same or not. Two arrays are said to be same if the sum of both the arrays are same and size of arrays are same:
+
+INPUT FORMAT:
+
+Input consists of 2 integers and 2 arrays.
+
+Integers correspond to the size of arrays.
+
+If two arrays are same, display "Same" else display "Not Same"
+
+
+Sample Input:
+3
+3
+1
+2
+3
+1
+2
+3
+
+Sample Output:
+Same
+
+
+import java.util.Scanner;
+public class Same
+{
+    public static void main(String[] args)
+    {
+     Scanner sc=new Scanner(System.in);
+     int a=sc.nextInt();
+     int b=sc.nextInt();
+      int c[]=new int[a];
+      int d[]=new int[b];
+      int large=0,large1=0;
+      for(int i=0;i<a;i++)
+      {
+          c[i]=sc.nextInt();
+      }
+      for(int j=0;j<b;j++)
+      {
+          d[j]=sc.nextInt();
+      }
+      for(int i=0;i<a;i++)
+      {
+         large=large+c[i]; 
+      }
+      for(int j=0;j<b;j++)
+      {
+          large1=large1+d[j];
+      }
+      if(a==b&&large==large1)
+      {
+          System.out.println("Same");
+      }
+      else
+      {
+          System.out.println("Not Same");
+      }
+    }
+}
